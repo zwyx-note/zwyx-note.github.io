@@ -3,6 +3,9 @@
 - type: github
   icon: "fab fa-github"
 
+- type: google-scholar
+  icon: "fa-brands fa-google-scholar"
+
 - type: twitter
   icon: "fa-brands fa-x-twitter"
 
@@ -13,6 +16,7 @@
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
