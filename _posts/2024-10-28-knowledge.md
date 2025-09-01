@@ -89,14 +89,22 @@ git config --global commit.gpgsign true
 Detached意思是当前screen没有被打开，相对的是Attached表示当前screen正处在打开状态。
 ```
 
-## 增加github克隆成功概率
-
-- 用 ghproxy 代理进行 git clone
-
-- 重点在于，在原本要克隆的网站地址前加入 `https://mirror.ghproxy.com/`
+- AutoDL默认安装了screen工具，但是创建和进入窗口的指令要添加`-U`，不然会乱码
 
 ```bash
-git clone https://mirror.ghproxy.com/https://github.com/........
+screen -U -S xxx
+
+screen -u -r xxx.xxx
+```
+
+## autodl
+
+- [autodl 不支持 conda activate 怎么办](https://blog.csdn.net/coldasice342/article/details/138816647)
+
+```bash
+conda init bash
+
+source ~/.bashrc
 ```
 
 ## huggingface 
@@ -126,7 +134,18 @@ rm -rf .vscode-server/
 
 - [修改路径](https://blog.csdn.net/weixin_43301333/article/details/128503260)
 
-## NER 模型学习参考
+## Wandb 平台应用
+
+```python
+import os 
+os.environ["WANDB_BASE_URL"] = "https://api.wandb-cn.top"
+```
+
+## Deepspeed
+
+- [中文网站链接](https://docs.deepspeed.org.cn/en/latest/initialize.html)
+
+<!-- ## NER 模型学习参考
 
 - [命名实体识别学习记录（spaCy/OpenNLP..）](https://blog.csdn.net/m0_53632564/article/details/128622529)
 
@@ -166,7 +185,7 @@ print(*[f'entity: {ent.text}\ttype: {ent.type}' for ent in doc.ents], sep='\n')
 
 ## 微调大模型
 
-- [用抱抱脸transformers微调ViT](https://huggingface.co/blog/fine-tune-vit)
+- [用抱抱脸transformers微调ViT](https://huggingface.co/blog/fine-tune-vit) -->
 
 ## GPU 显存不够 与 指定显卡
 

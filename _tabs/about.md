@@ -6,6 +6,9 @@ order: 4
 
 # 关于我 About me
 
+- 想了解更多，请点击此处，前往我的[个人主页](https://zhaiwangyuxuan.github.io)
+- For more details, click here to visit my personal homepage: [https://zhaiwangyuxuan.github.io](https://zhaiwangyuxuan.github.io)
+
 - 我的谷歌学术页面：[Wangyuxuan Zhai](https://scholar.google.com/citations?user=KtNShhoAAAAJ)
 - My Google Scholar page: [Wangyuxuan Zhai](https://scholar.google.com/citations?user=KtNShhoAAAAJ)
 
