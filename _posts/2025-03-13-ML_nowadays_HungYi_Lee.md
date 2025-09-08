@@ -6,11 +6,11 @@ tags: [llm/mllm, hung-yi lee]     # TAG names should always be lowercase
 description: 生成式AI時代下的機器學習(2025)
 ---
 
-## AI 技术突破与未来发展 PART - 第一讲
+## 第一讲 - AI 技术突破与未来发展
 
 - 别急
 
-## AI agent PART - 第二讲
+## 第二讲 - AI agent
 
 ### 来源
 
@@ -140,7 +140,7 @@ description: 生成式AI時代下的機器學習(2025)
     - [但是存在过度思考的危险](https://arxiv.org/abs/2502.08235)
 
 
-## AI 的腦科學 — 語言模型內部運作機制剖析 PART - 第三讲
+## 第三讲 - AI 的腦科學 — 語言模型內部運作機制剖析
 
 ### 来源
 

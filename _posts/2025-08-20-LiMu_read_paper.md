@@ -14,7 +14,7 @@ description: 跟李沐精读论文合集
 
 ### GPT-1
 
-- [论文链接](https://www.semanticscholar.org/paper/Improving-Language-Understanding-by-Generative-Radford-Narasimhan/cd18800a0fe0b668a1cc19f2ec95b5003d0a5035)
+- [Improving Language Understanding by Generative Pre-Training](https://www.semanticscholar.org/paper/Improving-Language-Understanding-by-Generative-Radford-Narasimhan/cd18800a0fe0b668a1cc19f2ec95b5003d0a5035)
 
 #### 背景介绍
 
@@ -42,7 +42,7 @@ description: 跟李沐精读论文合集
 
 ### GPT-2
 
-- [论文链接](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+- [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 
 #### 背景介绍
 
@@ -59,3 +59,43 @@ description: 跟李沐精读论文合集
 - 不妨采取 Reddit，里面都是用户筛选过的优质文本；
 
 - 结论：在很多任务上 SOTA 了，但在一些任务上还不够好，但是注意到性能随着模型变大而变好，那更大的模型表现如何？接下来看 GPT-3；
+
+### GPT-3
+
+- **建议看原论文**
+
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+
+#### 背景介绍
+
+- 相比于复杂地更新梯度与参数，不如直接 few-shot 来干
+
+#### 框架介绍与训练相关
+
+- 175B 的 GPT-3 非常之大；计算复杂度与宽度成平方关系，与层数成线性关系；
+
+- 同时在训练批次上，175B 的模型一个批次里的数据量达到了 3.2M，这极其巨大；
+
+    - 小模型不能用这么大的，因为更容易过拟合
+
+    - 为何大模型用大批次更不容易过拟合？大批次中信噪比更低。
+
+    - 模型越大，训练学习率越小，从 6.0 * 10-4 降到了 0.6 * 10-4
+
+- 对于预训练数据：首先下载清洗过的 common crawl 数据；
+
+    1. 与 GPT-2 用的预训练数据集做比较，将 GPT-2 的数据集当作正例，common crawl 当作负例，我们就有了一个二分类分类器，然后就只保留 common crawl 里的正例数据；
+
+    2. 使用 lsh 算法进行去重；
+
+    3. 加入了之前的一些高质量数据集； 
+
+    4. 对不同数据集，设置不同的采样率，以保证一个批次里，高质量的数据仍然占多数。
+
+#### 评估相关
+
+- 很多建议自己看
+
+#### 模型局限性
+
+- 长文本生成困难，结构上来说 gpt-3 只能向前看，没有涉及到别的领域，样本有效性较低，训练贵，可解释性差，歧视偏见现象严重
